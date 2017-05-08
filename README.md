@@ -20,9 +20,12 @@ z powrotem do widoku kalendarza.
   - framework Angular
   - style przy pomocy Sass (SCSS syntax)
   - dane pobierane z pliku `events.json`
+
+#### Co oceniamy?
+
+Oceniana jest nie tyle poprawność działania aplikacji, co przede wszystkim forma rozwiązania i jakość kodu.
   
-  
-#### Forma wykonania zadania
+#### Sposób nadesłania rozwiązania
 
 Forkujemy to repozytorium, rozwiązujemy zadanie, commit, push, a na koniec
 wysyłamy e-maila z linkiem do sforkowanego repozytorium na adres `ar@rds-group.pl`.
