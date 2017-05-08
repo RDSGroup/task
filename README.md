@@ -27,5 +27,5 @@ Oceniana jest nie tylko poprawność działania aplikacji, ale też forma rozwi�
   
 #### Sposób nadesłania rozwiązania
 
-Forkujemy to repozytorium, rozwiązujemy zadanie, commit, push, a na koniec
+Forkujemy to repozytorium, rozwiązujemy zadanie, commitujemy, pushujemy, a na koniec
 wysyłamy e-maila z linkiem do sforkowanego repozytorium na adres `ar@rds-group.pl`.
