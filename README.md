@@ -1,7 +1,7 @@
 # Zadanie rekrutacyjne RDS-Group | Maj 2017
 
 Przy pomocy frameworku Angular (https://angular.io/) stworzyć mini web aplikację - kalendarz.
-Dane do aplikacji znajdują się w pliku `events.json`
+Dane do aplikacji znajdują się w pliku `events.json`.
 
 #### Widoki w aplikacji
 
