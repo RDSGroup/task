@@ -23,7 +23,7 @@ z powrotem do widoku kalendarza.
 
 #### Co oceniamy?
 
-Oceniana jest nie tyle poprawność działania aplikacji, co przede wszystkim forma rozwiązania i jakość kodu.
+Oceniana jest nie tylko poprawność działania aplikacji, ale też forma rozwiązania i jakość kodu.
   
 #### Sposób nadesłania rozwiązania
 
