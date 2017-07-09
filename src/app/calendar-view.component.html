@@ -1,0 +1,45 @@
+<!-- Inner calendar-view component content -->
+<table class="calendar-view-table">
+
+	<!-- First row with calendar component -->
+	<tr>
+		<td colspan="3">
+			<calendar [m]="month"></calendar>
+		</td>
+	</tr>
+
+	<!-- Month navigation -->
+	<tr>
+		<td class="third">
+
+			<!-- Previous month -->
+			<button (click)="changeMonth(-1);">
+				Poprzedni
+
+				<!-- If previous month has events, show exclamation mark -->
+				<span *ngIf="hasOtherMonthAnyEvents(-1);">
+					(!)
+				</span>
+			</button>
+		</td>
+		<td class="third">
+
+			<!-- Current month -->
+			<button (click)="changeMonth(0);">
+				Obecny
+			</button>
+		</td>
+		<td class="third">
+
+			<!-- Next month -->
+			<button (click)="changeMonth(1);">
+				Następny
+
+				<!-- If next month has events, show exclamation mark -->
+				<span *ngIf="hasOtherMonthAnyEvents(1);">
+					(!)
+				</span>
+			</button>
+		</td>
+	</tr>
+</table>
