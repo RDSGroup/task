@@ -1,0 +1,32 @@
+<!-- When event is initialized -->
+<div *ngIf="event" class="event-detail">
+
+	<!-- Event name -->
+	<h2 title="Nazwa wydarzenia. Indeks wydarzenia: {{eventIndex}}">
+		{{event.name}}
+	</h2>
+
+	<!-- Time of the event -->
+	<h4 class="datetime" title="Data i czas wydarzenia">
+		{{event.time.toLocaleString()}}
+	</h4>
+
+	<!-- Event description -->
+	<p class="description">
+		<span title="Opis wydarzenia">
+			<i>
+				{{event.description}}
+			</i>
+		</span>
+	</p>
+
+	<!-- Return to the calendar -->
+	<a routerLink="/calendar">Wstecz</a>
+</div>
+
+<!-- When event is not inialized -->
+<div *ngIf="!event" class="event-detail">
+	<p>
+		Ładowanie wydarzeń...
+	</p>
+</div>

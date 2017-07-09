@@ -1,0 +1,49 @@
+<!-- When Month is initialized -->
+<div *ngIf="m" class="calendar">
+
+	<!-- Month and year -->
+	<h2>{{m.getMonthStr()}} {{m.year}}</h2>
+	<table class="calendar-table">
+
+		<!-- Short weekday names -->
+		<tr>
+			<td *ngFor="let dayName of dayNames">
+				<div>
+					{{dayName}}
+				</div>
+			</td>
+		</tr>
+
+		<!-- Week of month = row of the table -->
+		<tr *ngFor="let w of m.weeks">
+
+			<!-- Day of week = cell of a row -->
+			<td *ngFor="let day of w.weekdays" title="{{day.getMonthDayStr(false, m.month)}}" [ngClass]="(day.month === m.month && day.events.length > 0 ? 'has-events' : '')">
+
+				<!-- Div displayed only when the day comes from the selected month -->
+				<div *ngIf="day.month === m.month">
+
+					<!-- Day of the month (.getDate()) -->
+					<p>
+						{{day.monthDay}}
+					</p>
+
+					<!-- List of the day events -->
+					<ul *ngIf="day.events.length > 0">
+						<li *ngFor="let event of day.events"
+						    title="{{event.name}}">
+
+						    <!-- Link to the event detail view -->
+							<a [routerLink]="['/event', event.index]">{{formatTime(event.time)}}</a>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!-- When Month is not initialized -->
+<div *ngIf="!m">
+	<p>Ładowanie wydarzeń...</p>
+</div>

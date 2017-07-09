@@ -1,31 +1,13 @@
-# Zadanie rekrutacyjne RDS-Group | Lipiec 2017
+# Rozwiązanie zadania rekrutacyjnego RDS-Group | Lipiec 2017
 
-Przy pomocy frameworku Angular (https://angular.io/) stworzyć mini web aplikację - kalendarz.
-Dane do aplikacji znajdują się w pliku `events.json`.
+Autor: **Jakub Chmielewski**, e-mail: jakub.chmielewski.89@gmail.com
 
-#### Widoki w aplikacji
+#### Różnica implementacji względem tej wynikającej z opisu zadania
 
-  - widok miesiąca
-  - widok wydarzenia
+W opisie widoków prosicie Państwo o zaimplementowanie przejścia do widoku wydarzenia, 'po kliknięciu w zaznaczony dzień'. Jednak co gdyby w wejściowym pliku `events.json` znalazły się dwa lub więcej wydarzeń jednego dnia? Gdyby aplikacja miała składać się z widoku **miesiąca i dnia**, wtedy kliknięcie w dzień mogłoby wyświetlić wszystkie wydarzenia danego dnia. Jednak na początku wyraźnie zaznaczacie Państwo, że aplikacja ma składać się z widoku **miesiąca i wydarzenia**, zatem wybór tego wydarzenia musi się odbyć od razu z poziomu widoku miesiąca.
 
-Widok miesiąca powinien posiadać wypisane wszystkie dni aktualnego miesiąca w formie tabelki (układ
-jak w standardowym kalendarzu) oraz zaznaczone dni, w których odbywa się jakieś wydarzenie
-opisane w `events.json`. W zaznaczonym dniu powinna być również wypisana godzina wydarzenia.
-Po kliknięciu w zaznaczony dzień przechodzimy do widoku wydarzenia, gdzie wypisane są
-wszystkie informacje o wydarzeniu. Dodatkowo mamy przycisk _wstecz_, który przenosi nas
-z powrotem do widoku kalendarza.
+#### Alternatywne źródło danych
 
-#### Wymagania techniczne
+Przygotowałem edytowalny [arkusz kalkulacyjny](https://docs.google.com/spreadsheets/d/1mwzBkt6PCtXwxPQq5Pbs01IAV-hlrNI7IR17lQJwniA/edit) z przykładową listą wydarzeń do testów, którego reprezentacja w formacie JSON jest dostępna w [tym mini-serwisie](https://script.google.com/macros/s/AKfycbxCqzx1h3-B9qYJEHRHFQ_q3tm8nPPFXOlIKwwMNxG54mexDsY/exec). **Uwaga:** serwis nie zwraca wierszy-wydarzeń z nieprawidłową datą i czasem w pierwszej kolumnie.
 
-  - framework Angular
-  - style przy pomocy Sass (SCSS syntax)
-  - dane pobierane z pliku `events.json`
-
-#### Co oceniamy?
-
-Oceniana jest nie tylko poprawność działania aplikacji, ale też forma rozwiązania i jakość kodu.
-  
-#### Sposób nadesłania rozwiązania
-
-Forkujemy to repozytorium, rozwiązujemy zadanie, commitujemy, pushujemy, a na koniec
-wysyłamy e-maila z linkiem do sforkowanego repozytorium na adres `ar@rds-group.pl`.
+Aby aplikacja pobierała dane z tego serwisu w pliku `src/app/constants.ts` proszę podmienić stałą DATAURL linkiem do tego serwisu. Link jest dostępny również w komentarzu w pliku `constants.ts`.
